@@ -4,6 +4,8 @@
 #include "libretro.h"
 #include "Engine/Texture2D.h"
 #include <iostream>
+// #include <string>
+#include <algorithm>
 
 // Sets default values
 ALibretroGame::ALibretroGame()
@@ -300,9 +302,21 @@ void ALibretroGame::retro_get_system_info() {
     m_retroGetSystemInfo(&m_system_info);
 }
 
+/// <summary>
+/// Paths need to use backslashes on Windows
+/// </summary>
+/// <param name="path"></param>
+/// <returns></returns>
 bool ALibretroGame::retro_load_game(FString path) {
     struct retro_game_info game;
-    game.path = TCHAR_TO_ANSI(*path);
+
+    FString filePath = *FPaths::ProjectContentDir();
+    filePath += "Roms/" + path;
+    filePath = FPaths::ConvertRelativePathToFull(filePath);
+
+    std::replace(filePath.begin(), filePath.end(), '/', '\\'); // Unreal returns forward slashes. Windows uses backslashes
+
+    game.path = TCHAR_TO_ANSI(*filePath);
 
     if (m_retroLoadGame != NULL) {
         return m_retroLoadGame(&game);
