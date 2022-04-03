@@ -83,22 +83,24 @@ enum retro_key {
 
 	// player 3
 
-	RETROK_i = 105,
-	RETROK_k = 107,
-	RETROK_j = 106,
-	RETROK_l = 108,
-	RETROK_RCTRL = 305,
-	RETROK_RSHIFT = 303,
+	RETROK_7 = 55, // player 3 insert coin
+	RETROK_i = 105, // up
+	RETROK_k = 107, // down
+	RETROK_j = 106, // left
+	RETROK_l = 108, // right
+	RETROK_RCTRL = 305, // button 1
+	RETROK_RSHIFT = 303, // button 2
 	RETROK_RETURN = 13,
 
 	// player 4
 
-	RETROK_KP8 = 264,
-	RETROK_KP2 = 258,
-	RETROK_KP4 = 260,
-	RETROK_KP6 = 262,
-	RETROK_KP0 = 256,
-	RETROK_KP_PERIOD = 266,
+	RETROK_8 = 56, // player 4 insert coin
+	RETROK_KP8 = 264, // up
+	RETROK_KP2 = 258, // down
+	RETROK_KP4 = 260,  // left
+	RETROK_KP6 = 262, // right
+	RETROK_KP0 = 256, // Button 1
+	RETROK_KP_PERIOD = 266, // Button 2
 	RETROK_KP_ENTER = 271,
 
 	// misc
