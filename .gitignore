@@ -72,3 +72,17 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+Content/Roms/
+
+Content/Movies/gaunt2.mp4
+
+Content/Movies/Gauntlet.mp4
+
+mame2010/cfg/
+
+mame2010/hi/
+
+mame2010/ini/
+
+mame2010/nvram/
